@@ -46,6 +46,7 @@ nav img {
   margin: 0 15px;
   color: #3e4794;
   font-weight: 700;
+  cursor: pointer;
 }
 
 /* sign-in button */
@@ -58,6 +59,18 @@ nav img {
   border-radius: 30px;
   background: linear-gradient(to right, #965cf2, #ff8adc);
   color: #fff;
+  cursor: pointer;
+}
+
+/* hamburger */
+.check-btn {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
 }
 
 /****** main content ******/
@@ -103,6 +116,7 @@ nav img {
   border-radius: 30px;
   background: linear-gradient(to right, #965cf2, #ff8adc);
   color: #fff;
+  cursor: pointer;
 }
 
 /*** right side content ***/
@@ -118,6 +132,7 @@ nav img {
   bottom: -470px;
   left: 50px;
   width: 80px;
+  z-index: 1;
 }
 
 /* dot img */
@@ -125,6 +140,7 @@ nav img {
   position: absolute;
   bottom: -395px;
   left: 98px;
+  z-index: 1;
 }
 
 /* big image */
@@ -133,6 +149,7 @@ nav img {
   position: absolute;
   top: -120px;
   right: 100px;
+  z-index: 1;
 }
 
 /*----------Media Query Smaller Device---------- */
@@ -144,10 +161,23 @@ nav img {
     background-position: top 200% right 71%;
   }
 
-  /* navbar */
+  /*------ navbar------- */
   nav {
+    padding: 30px 30px 0;
+    width: 100%;
+  }
+
+  .nav-items {
     display: none;
   }
+
+  .signin-btn {
+    display: none;
+  }
+  .check-btn {
+    display: block;
+  }
+  /*------ navbar------- */
 
   /* intro section */
   .intro-section {
@@ -197,7 +227,6 @@ nav img {
 
   /* mountain dot */
   .vector-dot {
-    /* position: absolute; */
     bottom: 85px;
     left: 70px;
     width: 10px;
@@ -207,6 +236,7 @@ nav img {
   .vector-dot + img {
     width: 100%;
     position: static;
+    z-index: 1;
   }
 }
 
@@ -219,11 +249,24 @@ nav img {
     background-size: contain;
   }
 
-  /* navbar */
+  /*------ navbar------- */
   nav {
+    padding: 30px 2% 0;
+    width: 100%;
+  }
+
+  .nav-items {
     display: none;
   }
 
+  .signin-btn {
+    display: none;
+  }
+
+  .check-btn {
+    display: block;
+  }
+  /*------ navbar------- */
   /* intro section */
   .intro-section {
     flex-direction: column;
